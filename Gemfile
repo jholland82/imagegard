@@ -37,6 +37,10 @@ gem 'minitest-rails', :group => [:development, :test]
 gem 'devise'
 gem "omniauth-google-oauth2"
 
+# Secure S3 Uploading
+gem 'fog'
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
