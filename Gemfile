@@ -8,6 +8,8 @@ gem 'rails', '4.1.5'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -30,6 +32,10 @@ gem 'spring',        group: :development
 # Testing Gems
 gem 'minitest',       :group => [:development, :test]
 gem 'minitest-rails', :group => [:development, :test]
+
+# Authentication
+gem 'devise'
+gem "omniauth-google-oauth2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
