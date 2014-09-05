@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Manage environment variables
+gem 'dotenv', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -30,8 +32,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Testing Gems
-gem 'minitest',       :group => [:development, :test]
-gem 'minitest-rails', :group => [:development, :test]
+gem 'minitest',       :groups => [:development, :test]
+gem 'minitest-rails', :groups => [:development, :test]
 
 # Authentication
 gem 'devise'
@@ -40,6 +42,9 @@ gem "omniauth-google-oauth2"
 # Secure S3 Uploading
 gem 'fog'
 gem 'carrierwave'
+
+# Form Builder
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,9 +1,8 @@
 class WelcomeController < ApplicationController
 
-  before_action :authenticate_user!, :except => [:index]
-  
   def index
-    logger.info "*****"
-    logger.info user_signed_in?
+    if user_signed_in?
+      redirect_to images_path
+    end
   end
 end
