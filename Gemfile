@@ -42,6 +42,8 @@ gem "omniauth-google-oauth2"
 # Secure S3 Uploading
 gem 'fog'
 gem 'carrierwave'
+gem 'gpgme'
+gem 'symmetric-encryption'
 
 # Form Builder
 gem 'simple_form'

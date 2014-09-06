@@ -10,6 +10,8 @@ class ImagesController < ApplicationController
   
   def create
     @image = Image.new(image_params)
+    @image.encrypt
+    logger.info "******#{@image.image_file}*****"
     if @image.save
       flash[:notice] = "Image successfully saved"
       redirect_to :action => :index
@@ -21,7 +23,6 @@ class ImagesController < ApplicationController
 
   private
     def image_params
-      logger.info params
-      params.permit(:image_file)
+      params.fetch(:image, {}).permit(:image_file)
     end
 end
